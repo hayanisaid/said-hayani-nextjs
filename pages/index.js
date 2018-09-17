@@ -60,7 +60,8 @@ class Home extends React.Component {
               </div>
             </div>
             <div className="picture">
-              <img src="./../static/said.jpg" width="200px" />
+              <div className="circle" />
+              <img src="./../static/images/profile.png" width="200px" />
             </div>
           </div>
         </Page>

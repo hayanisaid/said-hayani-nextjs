@@ -5,6 +5,7 @@
     margin:4em;
     position: absolute;
     height: 100%;
+    overflow:hidden
 }
 h1{
     font-family:"Raleway";
@@ -37,4 +38,84 @@ inline-list{
     width:50px;
     height:50px;
     margin:1em
+}
+.picture{
+    overflow:hidden
+}
+.picture img{
+        height: 25em;
+    width: 100%;
+    object-fit: cover;
+}
+.picture .circle{
+   background: #eee;
+    display: block;
+ width:30em;
+        height:30em;
+    position: absolute;
+    z-index: -1;
+    border-radius: 100%;
+    bottom: 17em;
+    left: 33em;
+    animation:bounce linear infinite 10s;
+}
+@keyframes bounce{
+
+    
+    0%{
+           transform: rotate(60deg);
+        transform:translateX(-150px);
+             animation-timing-function: cubic-bezier(.17,.67,.83,.67);
+   
+    }
+       10%{
+      transform: rotate(120deg);
+        transform:translateX(-250px);
+             animation-timing-function: cubic-bezier(.17,.67,.83,.67);
+       
+    }
+    20%{
+         transform: rotate(180deg);
+        transform:translateX(-350px);
+             animation-timing-function: cubic-bezier(.17,.67,.83,.67);
+  
+    }
+        40%{
+        transform: rotate(220deg);
+        transform:translateX(-600px);
+        background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
+             animation-timing-function: cubic-bezier(.17,.67,.83,.67);
+  
+    }
+    50%{
+       transform: rotate(300deg);
+        transform:translateX(0);
+             animation-timing-function: cubic-bezier(.17,.67,.83,.67);
+       
+ 
+    }
+      70%{
+       transform: rotate(220deg);
+        transform:translateX(-300);
+             animation-timing-function: cubic-bezier(.17,.67,.83,.67);
+ 
+    }
+     80%{
+       transform: rotate(1800deg);
+        transform:translateX(-200);
+             animation-timing-function: cubic-bezier(.17,.67,.83,.67);
+ 
+    }
+     90%{
+       transform: rotate(120deg);
+        transform:translateX(-100);
+             animation-timing-function: cubic-bezier(.17,.67,.83,.67);
+ 
+    }
+       100%{
+       transform: rotate(60deg);
+        transform:translateX(0);
+      animation-timing-function: cubic-bezier(.17,.67,.83,.67);
+    }
+
 }
