@@ -10,6 +10,7 @@
     "axios": "^0.18.0",
     "babel-plugin-module-resolver": "3.1.1",
     "babel-plugin-wrap-in-js": "^1.1.1",
+    "css-loader": "^1.0.0",
     "date-fns": "^2.0.0-alpha.1",
     "express": "^4.16.3",
     "glob": "7.1.2",
@@ -23,9 +24,11 @@
     "raw-loader": "^0.5.1",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
-    "speakingurl": "^14.0.1"
+    "sass-loader": "^7.1.0",
+    "speakingurl": "^14.0.1",
+    "style-loader": "^0.23.0"
   },
-    "devDependencies": {
+  "devDependencies": {
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2"
   }

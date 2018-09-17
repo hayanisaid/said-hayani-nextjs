@@ -14,13 +14,29 @@ const Nav = props => (
       <ul className="menu">
         <li className="menu-item">
           <Link href="/">
-            <a>Home</a>
+            <a>
+              {/* <img
+                src="./../static/icons/home.png"
+                className="nav-icon"
+                width="60"
+                height="60"
+              /> */}
+              Home{" "}
+            </a>
           </Link>
         </li>
         <li className="menu-item">
           {" "}
           <Link href="/">
-            <a>AboutMe</a>
+            <a>
+              AboutMe{" "}
+              {/* <img
+                src="./../static/images/me.jpeg"
+                className="nav-icon"
+                width="60"
+                height="60"
+              /> */}
+            </a>
           </Link>
         </li>
         <li className="menu-item">
@@ -32,13 +48,29 @@ const Nav = props => (
         <li className="menu-item">
           {" "}
           <Link href="/">
-            <a>Stories</a>
+            <a>
+              Stories{" "}
+              {/* <img
+                src="./../static/images/me.jpeg"
+                className="nav-icon"
+                width="60"
+                height="60"
+              /> */}
+            </a>
           </Link>
         </li>
         <li className="menu-item">
           {" "}
           <Link href="/">
-            <a>Contact</a>
+            <a>
+              Contact{" "}
+              <img
+                src="./../static/icons/person.png"
+                className="nav-icon"
+                width="60"
+                height="60"
+              />
+            </a>
           </Link>
         </li>
       </ul>
