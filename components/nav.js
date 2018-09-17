@@ -28,20 +28,6 @@ const Nav = props => (
         <li className="menu-item">
           {" "}
           <Link href="/">
-            <a>
-              AboutMe{" "}
-              {/* <img
-                src="./../static/images/me.jpeg"
-                className="nav-icon"
-                width="60"
-                height="60"
-              /> */}
-            </a>
-          </Link>
-        </li>
-        <li className="menu-item">
-          {" "}
-          <Link href="/">
             <a>Blog</a>
           </Link>
         </li>
@@ -64,14 +50,21 @@ const Nav = props => (
           <Link href="/">
             <a>
               Contact{" "}
-              <img
+              {/* <img
                 src="./../static/icons/person.png"
                 className="nav-icon"
                 width="60"
                 height="60"
-              />
+              /> */}
             </a>
           </Link>
+        </li>
+        <li className="menu-item">
+          <label class="form-switch">
+            <input type="checkbox" />
+            <i />
+            Night Mode
+          </label>
         </li>
       </ul>
     </nav>

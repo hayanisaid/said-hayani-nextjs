@@ -64,6 +64,17 @@ class Home extends React.Component {
               <img src="./../static/images/profile.png" width="200px" />
             </div>
           </div>
+          {/* splitter */}
+          <div className="spliter">
+            <div className="spliter-wrapper">
+              <div className="description">
+                <h1> Technical writer I try to make somtinh </h1>
+              </div>
+              <div className="img">
+                <img src="./../static/images/said.jpg" />
+              </div>
+            </div>
+          </div>
         </Page>
       </div>
     );
