@@ -1,5 +1,7 @@
 const path = require("path");
 const glob = require("glob");
+const withSass = require("@zeit/next-sass");
+module.exports = withSass();
 
 module.exports = {
   webpack: (config, { dev }) => {
@@ -10,6 +12,13 @@ module.exports = {
         loader: "emit-file-loader",
         options: {
           name: "dist/[path][name].[ext]"
+        }
+      },
+      {
+        test: /\.scss/,
+        loader: "sass-loader",
+        options: {
+          includePaths: ["styles", "node_Modules"]
         }
       },
       {

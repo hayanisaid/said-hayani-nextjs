@@ -2,13 +2,17 @@ import React from "react";
 import Link from "next/link";
 import Head from "../components/head";
 import Page from "../components/page";
+import Splitter from "../components/splitter";
+
+//import "./../styles/sass.scss";
 //const imgProfile = require("./../static/said.png");
 class Home extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      height: ""
+      width: 0
     };
+    this.HandelSplitterWidth = this.HandelSplitterWidth.bind(this);
   }
 
   componentDidMount() {
@@ -20,12 +24,24 @@ class Home extends React.Component {
     this.setState({ height: height });
   }
 
+  HandelSplitterWidth(e) {
+    console.log(e.clientX);
+    console.log(window.innerWidth);
+    let width = (e.clientX - innerHeight / 2) * 1;
+    this.setState({ width });
+  }
+
   render() {
     return (
       <div>
         <Page>
           <Head title="Home" style={{ height: this.state.height }} />
-          <div className="wrapper home">
+          <div
+            className="wrapper home"
+            onMouseMove={vm => {
+              this.HandelSplitterWidth(vm);
+            }}
+          >
             <div className="desciption">
               <h1>Hi, This is Said Hayani</h1>
               <h3>Full Stack Developer, JavaScript enthensiast </h3>
@@ -65,16 +81,7 @@ class Home extends React.Component {
             </div>
           </div>
           {/* splitter */}
-          <div className="spliter">
-            <div className="spliter-wrapper">
-              <div className="description">
-                <h1> Technical writer I try to make somtinh </h1>
-              </div>
-              <div className="img">
-                <img src="./../static/images/said.jpg" />
-              </div>
-            </div>
-          </div>
+          <Splitter width={this.state.width} />
         </Page>
       </div>
     );

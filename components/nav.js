@@ -60,7 +60,7 @@ const Nav = props => (
           </Link>
         </li>
         <li className="menu-item">
-          <label class="form-switch">
+          <label className="form-switch">
             <input type="checkbox" />
             <i />
             Night Mode

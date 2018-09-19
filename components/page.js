@@ -9,7 +9,7 @@ class Page extends React.Component {
         <style dangerouslySetInnerHTML={{ __html: style.replace(/\n/g, "") }} />
         <Nav cName="navigator" />
         <div className="main">{this.props.children}</div>
-        <Footer cName="footer" />
+        {/* <Footer cName="footer" /> */}
 
         <style jsx>{``}</style>
       </div>
