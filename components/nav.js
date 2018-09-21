@@ -27,13 +27,13 @@ const Nav = props => (
         </li>
         <li className="menu-item">
           {" "}
-          <Link href="/">
-            <a>Blog</a>
+          <Link href="/blog">
+            <a>MyArticles</a>
           </Link>
         </li>
         <li className="menu-item">
           {" "}
-          <Link href="/">
+          <Link href="/stories">
             <a>
               Stories{" "}
               {/* <img
@@ -47,7 +47,7 @@ const Nav = props => (
         </li>
         <li className="menu-item">
           {" "}
-          <Link href="/">
+          <Link href="/contact">
             <a>
               Contact{" "}
               {/* <img

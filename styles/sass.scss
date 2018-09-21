@@ -1,3 +1,4 @@
-body{
-    background:red !important
+$font-size: 50px;
+.example {
+  font-size: $font-size;
 }

@@ -26,6 +26,8 @@
     "raw-loader": "^0.5.1",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
+    "react-redux": "^5.0.7",
+    "redux": "^4.0.0",
     "sass-loader": "^7.1.0",
     "speakingurl": "^14.0.1",
     "style-loader": "^0.23.0"
