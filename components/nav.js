@@ -1,5 +1,8 @@
 import React from "react";
 import Link from "next/link";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
+import ActionInvokers from "./actions";
 
 const Nav = props => (
   <div className={props.cName}>
@@ -64,4 +67,17 @@ const Nav = props => (
   </div>
 );
 
-export default Nav;
+//export default Nav;
+
+const mapDispatchersToProps = dispatcher => {
+  return bindActionCreators(ActionInvokers, dispatcher);
+};
+const mapStateToProps = state => {
+  return {
+    inNight: state.isNight
+  };
+};
+export default connect(
+  mapStateToProps,
+  mapDispatchersToProps
+)(Nav);
