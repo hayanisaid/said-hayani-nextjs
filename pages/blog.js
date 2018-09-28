@@ -6,6 +6,10 @@ import Card from "./../components/card";
 //const imag = require("./../static/images/me.jpeg");
 
 class Blog extends React.Component {
+  componentDidMount() {
+    console.log("process");
+    console.log(process.env.URL);
+  }
   render() {
     return (
       <div className="blog ">
@@ -14,10 +18,10 @@ class Blog extends React.Component {
           <div className="blog-wrapper">
             <div className="header">
               <div className="description">
-                <h1>My Articles</h1>
+                <h1>My Articles </h1>
                 <h2>
                   Writting Articles About allows me to explore the hype of
-                  technology
+                  technology {process.env.URL}
                 </h2>
               </div>
             </div>

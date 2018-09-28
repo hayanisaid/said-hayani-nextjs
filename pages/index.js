@@ -4,7 +4,6 @@ import dynamic from "next/dynamic";
 const Home = dynamic(import("./home"), {
   loading: () => <div>.... loading</div>
 });
-
 class App extends React.Component {
   render() {
     return <Home />;

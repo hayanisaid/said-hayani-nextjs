@@ -1,19 +1,12 @@
 import React from "react";
 import Link from "next/link";
 
-// const links = [
-//   { href: "https://github.com/segmentio/create-next-app", label: "Github" }
-// ].map(link => {
-//   link.key = `nav-link-${link.href}-${link.label}`;
-//   return link;
-// });
-
 const Nav = props => (
   <div className={props.cName}>
     <nav>
       <ul className="menu">
         <li className="menu-item">
-          <Link href="/">
+          <Link href="/home">
             <a>
               {/* <img
                 src="./../static/icons/home.png"
@@ -21,21 +14,21 @@ const Nav = props => (
                 width="60"
                 height="60"
               /> */}
-              Home{" "}
+              Home 🏠{" "}
             </a>
           </Link>
         </li>
         <li className="menu-item">
           {" "}
           <Link href="/blog">
-            <a>MyArticles</a>
+            <a>MyArticles 📘</a>
           </Link>
         </li>
         <li className="menu-item">
           {" "}
           <Link href="/stories">
             <a>
-              Stories{" "}
+              Stories 🎥{" "}
               {/* <img
                 src="./../static/images/me.jpeg"
                 className="nav-icon"
@@ -49,7 +42,7 @@ const Nav = props => (
           {" "}
           <Link href="/contact">
             <a>
-              Contact{" "}
+              Contact 🙍{" "}
               {/* <img
                 src="./../static/icons/person.png"
                 className="nav-icon"

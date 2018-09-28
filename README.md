@@ -16,7 +16,7 @@ Find the most recent version of this guide at [here](https://github.com/segmenti
 - [Custom Server](#custom-server)
 - [Syntax Highlighting](#syntax-highlighting)
 - [Using the `static` Folder](#using-the-static-folder)
-- [Deploy to Now](#deploy-to-now)
+- [Deploy to Now](#deploy-to-now) 
 - [Something Missing?](#something-missing)
 
 ## Questions? Feedback?

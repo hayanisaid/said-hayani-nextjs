@@ -22,13 +22,15 @@
     text-align: center;
         margin-bottom: 1em;
         transition:.1s linear;
+            border-radius: 4px;
            
   }
   .menu li:hover{
     background:#c00000;
   }
     .menu li:hover a{
-    color:#fff
+    color:#fff;
+    margin-left:1em
   }
   .menu li a{
       color: #c00000;
@@ -38,6 +40,7 @@
         justify-content: center;
     display: flex;
     align-items: center;
+    transition:.3s linear
   }
 
   .form-switch {
@@ -92,7 +95,7 @@
 
 .form-switch input { display: none; }
 
-.form-switch input:checked + i { background-color: #4BD763; }
+.form-switch input:checked + i { background-color: #2d095c; }
 
 .form-switch input:checked + i::before { transform: translate3d(18px, 2px, 0) scale3d(0, 0, 0); }
 
