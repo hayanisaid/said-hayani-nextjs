@@ -1,7 +1,9 @@
 import React from "react";
+import { connect } from "react-redux";
 import Link from "next/link";
 import Head from "../components/head";
 import Page from "../components/page";
+import Wrapper from "../components/wrapper";
 import Splitter from "../components/splitter";
 import Scale from "./../components/scale";
 
@@ -91,4 +93,5 @@ class Home extends React.Component {
   }
 }
 
-export default Home;
+//export default Home;
+export default Wrapper(connect(state => state)(Home));

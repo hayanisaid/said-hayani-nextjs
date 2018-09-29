@@ -1,7 +1,9 @@
 import React from "react";
+import { connect } from "react-redux";
 import Nav from "./../components/nav";
 import Head from "./../components/head";
 import Page from "./../components/page";
+import Wrapper from "./../components/wrapper";
 import Card from "./../components/card";
 //const imag = require("./../static/images/me.jpeg");
 
@@ -26,36 +28,38 @@ class Blog extends React.Component {
               </div>
             </div>
             <div className="cards">
-              <Card
-                title="JavaScript write less do more"
-                image="./../static/images/me.jpeg"
-                description="this is the description of my Articles"
-              />
-              <Card
-                title="JavaScript write less do more"
-                image="./../static/images/me.jpeg"
-                description="this is the description of my Articles"
-              />
-              <Card
-                title="JavaScript write less do more"
-                image="./../static/images/me.jpeg"
-                description="this is the description of my Articles"
-              />
-              <Card
-                title="JavaScript write less do more"
-                image="./../static/images/me.jpeg"
-                description="this is the description of my Articles"
-              />
-              <Card
-                title="JavaScript write less do more"
-                image="./../static/images/me.jpeg"
-                description="this is the description of my Articles"
-              />
-              <Card
-                title="JavaScript write less do more"
-                image="./../static/images/me.jpeg"
-                description="this is the description of my Articles"
-              />
+              <React.Fragment>
+                <Card
+                  title="JavaScript write less do more"
+                  image="./../static/images/me.jpeg"
+                  description="this is the description of my Articles"
+                />
+                <Card
+                  title="JavaScript write less do more"
+                  image="./../static/images/me.jpeg"
+                  description="this is the description of my Articles"
+                />
+                <Card
+                  title="JavaScript write less do more"
+                  image="./../static/images/me.jpeg"
+                  description="this is the description of my Articles"
+                />
+                <Card
+                  title="JavaScript write less do more"
+                  image="./../static/images/me.jpeg"
+                  description="this is the description of my Articles"
+                />
+                <Card
+                  title="JavaScript write less do more"
+                  image="./../static/images/me.jpeg"
+                  description="this is the description of my Articles"
+                />
+                <Card
+                  title="JavaScript write less do more"
+                  image="./../static/images/me.jpeg"
+                  description="this is the description of my Articles"
+                />
+              </React.Fragment>
             </div>
           </div>
         </Page>
@@ -64,4 +68,4 @@ class Blog extends React.Component {
   }
 }
 
-export default Blog;
+export default Wrapper(connect(state => state)(Blog));
