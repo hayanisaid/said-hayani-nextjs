@@ -48,8 +48,8 @@ const Splitter = props => (
 );
 
 const HandelSplitterWidth = e => {
-  console.log(e.clientX);
-  console.log(window.innerWidth);
+  //console.log(e.clientX);
+  // console.log(window.innerWidth);
   width = e.clientX / window.innerWidth;
 };
 

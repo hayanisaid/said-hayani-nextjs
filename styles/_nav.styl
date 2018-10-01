@@ -1,5 +1,4 @@
   .navigator {
-    background:#f8f9fc;
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
@@ -10,6 +9,7 @@
           width: 20%;
     position: fixed;
   }
+
   .menu{
      padding: 2em;
     list-style-type: none;
@@ -106,4 +106,45 @@
 }
 .hello{
     background-color:red !important
+}
+.navnightmode{
+  background-color:#141010;
+  transition:.3s linear;
+  animation: .3s slow linear ;
+  
+}
+.navnightmode .menu li a{
+  color:#f4f4f4 !important;
+
+
+}
+.navdaymode{
+  background:#f8f9fc;
+}
+@keyframes slow{
+  0%{
+          background-image: radial-gradient(at top center, #141010 10%, #fff 10%), linear-gradient(to top, rgba(255,255,255,0.1) 82%, rgba(143,152,157,0.6) 100%);
+          background-blend-mode: normal, multiply;
+          animation-timing-function:cubic-bezier(.17,.67,.83,.67);
+  }
+  25%{
+      background-image: radial-gradient(at top center, #141010 7%, #fff 20%), linear-gradient(to top, rgba(255,255,255,0.1) 82%, rgba(143,152,157,0.6) 100%);
+      background-blend-mode: normal, multiply;
+      animation-timing-function:cubic-bezier(.17,.67,.83,.67);
+  }
+  50%{
+      background-image: radial-gradient(at top center, #141010 40%, #fff 10%), linear-gradient(to top, rgba(255,255,255,0.1) 82%, rgba(143,152,157,0.6) 100%);
+      background-blend-mode: normal, multiply;
+      animation-timing-function:cubic-bezier(.17,.67,.83,.67);
+  }
+  90%{
+    background-image: radial-gradient(at top center, #141010 90%, #fff 10%), linear-gradient(to top, rgba(255,255,255,0.1) 82%, rgba(143,152,157,0.6) 100%);
+    background-blend-mode: normal, multiply;
+    animation-timing-function:cubic-bezier(.17,.67,.83,.67);
+  }
+  100%{
+      background-image: radial-gradient(at top center, #141010 100%, #fff 10%), linear-gradient(to top, rgba(255,255,255,0.1) 82%, rgba(143,152,157,0.6) 100%);
+      background-blend-mode: normal, multiply;
+      animation-timing-function:cubic-bezier(.17,.67,.83,.67);
+  }
 }

@@ -4,11 +4,12 @@ export const TYPES = {
 
 export const ActionInvorkers = {
   // my actions
-  setNightMode: () => setNightMode()
+  setNightMode: data => setNightMode(data)
 };
 
-export const setNightMode = () => {
+export const setNightMode = mode => {
   return {
-    type: TYPES.NIGHT_MODE
+    type: TYPES.NIGHT_MODE,
+    payload: mode
   };
 };

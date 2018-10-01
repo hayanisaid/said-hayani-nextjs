@@ -8,28 +8,49 @@ import { ActionInvorkers } from "./actions/nav.actions";
 class Nav extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      mode: false
+    };
   }
-  setNightMode() {
-    this.props.setNightMode();
-    console.log(this.props.isNighMode);
-    // document.body.style.backgroundColor = this.props.isNighMode.backgroundColor;
+
+  toggleChecker() {
+    // this.setState(({ mode }) => ({ mode: !mode }));
+    // setTimeout(() => {
+    //   console.log("sss");
+    //   console.log(this.state.mode);
+    // }, 2000);
+
+    this.setState({ mode: !this.state.mode }, () => {
+      if (this.state.mode === true) {
+        console.log(this.state.mode);
+        this.props.setNightMode("navnightmode");
+      } else if (this.state.mode === false) {
+        this.props.setNightMode("navdaymode");
+      }
+    });
   }
+  // toggleChecker(event) {toggleChecker
+  //   const target = event.target;
+  //   const value = target.type === "checkbox" ? target.checked : target.value;
+  //   const name = target.name;
+  //   console.log("clicked!!");
+  //   console.log(name);
+  //   this.setState({
+  //     [name]: value
+  //   });
+  //   console.log(this.state.mode);
+  //   // this.props.setNightMode();
+  // }
   render() {
+    console.log("rendered");
+    console.log(this.state.mode);
     return (
-      <div className={this.props.cName}>
+      <div className={`navigator  ${this.props.NighMode.navClass}`}>
         <nav>
           <ul className="menu">
             <li className="menu-item">
               <Link href="/home">
-                <a>
-                  {/* <img
-                  src="./../static/icons/home.png"
-                  className="nav-icon"
-                  width="60"
-                  height="60"
-                /> */}
-                  Home 🏠{" "}
-                </a>
+                <a>Home 🏠 </a>
               </Link>
             </li>
             <li className="menu-item">
@@ -41,36 +62,25 @@ class Nav extends Component {
             <li className="menu-item">
               {" "}
               <Link href="/stories">
-                <a>
-                  Stories 🎥{" "}
-                  {/* <img
-                  src="./../static/images/me.jpeg"
-                  className="nav-icon"
-                  width="60"
-                  height="60"
-                /> */}
-                </a>
+                <a>Stories 🎥 </a>
               </Link>
             </li>
             <li className="menu-item">
               {" "}
               <Link href="/contact">
-                <a>
-                  Contact 🙍{" "}
-                  {/* <img
-                  src="./../static/icons/person.png"
-                  className="nav-icon"
-                  width="60"
-                  height="60"
-                /> */}
-                </a>
+                <a>Contact 🙍 </a>
               </Link>
             </li>
             <li className="menu-item">
               <label className="form-switch">
-                <input type="checkbox" onClick={this.setNightMode.bind(this)} />
+                <input
+                  type="checkbox"
+                  ref="switch"
+                  checked={this.state.mode}
+                  onChange={this.toggleChecker.bind(this)}
+                />
                 <i />
-                <span>🌙</span>
+                <span>{this.props.NighMode.isNighMode ? "🌙" : "🌞"}</span>
               </label>
             </li>
           </ul>
@@ -87,7 +97,7 @@ const mapDispatchersToProps = dispatcher => {
 };
 const mapStateToProps = state => {
   return {
-    isNighMode: state.NightMode
+    NighMode: state.NightMode
   };
 };
 

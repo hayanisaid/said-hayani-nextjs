@@ -20,8 +20,8 @@ class Home extends React.Component {
   }
 
   componentDidMount() {
-    console.log("window height");
-    console.log(window.innerHeight);
+    //console.log("window height");
+    //  console.log(window.innerHeight);
     const margin = 16; // In my case was marginTop: 8px and marginBottom: 8px
     const height = document.body.scrollHeight - margin;
     // let height = window.innerHeight;
@@ -29,8 +29,8 @@ class Home extends React.Component {
   }
 
   HandelSplitterWidth(e) {
-    console.log(e.clientX);
-    console.log(window.innerWidth);
+    // console.log(e.clientX);
+    // console.log(window.innerWidth);
     let width = (e.clientX - innerHeight / 2) * 1;
     this.setState({ width });
   }

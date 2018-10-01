@@ -7,7 +7,7 @@ class Page extends React.Component {
     return (
       <div className="container">
         <style dangerouslySetInnerHTML={{ __html: style.replace(/\n/g, "") }} />
-        <Nav cName="navigator" />
+        <Nav />
         <div className="main">{this.props.children}</div>
         {/* <Footer cName="footer" /> */}
 
