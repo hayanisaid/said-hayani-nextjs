@@ -11,6 +11,7 @@ class Nav extends Component {
     this.state = {
       mode: false
     };
+    console.log(this.props);
   }
 
   toggleChecker() {
@@ -22,10 +23,23 @@ class Nav extends Component {
 
     this.setState({ mode: !this.state.mode }, () => {
       if (this.state.mode === true) {
-        console.log(this.state.mode);
-        this.props.setNightMode("navnightmode");
+        const data = {
+          isNightMode: true,
+          navClass: "navnightmode",
+          circlemodeclass: "circleNight",
+          homeClass: "homeNight",
+          titleclass: "titleNight"
+        };
+        this.props.setNightMode(data);
       } else if (this.state.mode === false) {
-        this.props.setNightMode("navdaymode");
+        const data = {
+          isNightMode: false,
+          navClass: "navdaymode",
+          circlemodeclass: "cirlceDay",
+          homeClass: "homeDay",
+          titleclass: "titleDay"
+        };
+        this.props.setNightMode(data);
       }
     });
   }
@@ -42,10 +56,8 @@ class Nav extends Component {
   //   // this.props.setNightMode();
   // }
   render() {
-    console.log("rendered");
-    console.log(this.state.mode);
     return (
-      <div className={`navigator  ${this.props.NighMode.navClass}`}>
+      <div className={`navigator  ${this.props.NightMode.navClass}`}>
         <nav>
           <ul className="menu">
             <li className="menu-item">
@@ -80,7 +92,7 @@ class Nav extends Component {
                   onChange={this.toggleChecker.bind(this)}
                 />
                 <i />
-                <span>{this.props.NighMode.isNighMode ? "🌙" : "🌞"}</span>
+                <span>{this.props.NightMode.isNighMode ? "🌙" : "🌞"}</span>
               </label>
             </li>
           </ul>
@@ -97,7 +109,7 @@ const mapDispatchersToProps = dispatcher => {
 };
 const mapStateToProps = state => {
   return {
-    NighMode: state.NightMode
+    NightMode: state.NightMode
   };
 };
 

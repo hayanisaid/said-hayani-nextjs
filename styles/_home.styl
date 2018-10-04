@@ -1,15 +1,23 @@
 .wrapper{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 2em;
-    margin:4em;
+    padding: 4em;
+  
     position: absolute;
     height: 100%;
     overflow:hidden
 }
+.homeNight{
+background:#000000
+}
+.titleNight{
+color:#fff !important
+}
+.titleDay{
+color:#141010 !important
+}
 h1{
     font-family:"Raleway";
-    color:"#0c0000";
     font-size:3em
 }
 h3{
@@ -47,7 +55,7 @@ inline-list{
     width: 100%;
     object-fit: cover;
 }
-.picture .circle{
+.picture .cirlceDay{
    background: #eee;
     display: block;
  width:30em;
@@ -134,6 +142,18 @@ inline-list{
     height: 100%;
     z-index: 2;
 
+}
+.picture .circleNight{
+background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+    display: block;
+       animation:bounce linear infinite 10s;
+ width:30em;
+        height:30em;
+    position: absolute;
+    z-index: -1;
+    border-radius: 100%;
+    bottom: 17em;
+    left: 33em;
 }
 .spliter img{
     width:100px;

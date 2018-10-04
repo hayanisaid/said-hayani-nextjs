@@ -2,7 +2,10 @@ import { TYPES } from "./../actions/nav.actions";
 
 const initialState = {
   isNightMode: false,
-  navClass: "navdaymode"
+  navClass: "navdaymode",
+  circlemodeclass: "cirlceDay",
+  homeClass: "homeDay",
+  titleclass: "titleDay"
 };
 
 export function setNightModeReducer(state = initialState, action) {
@@ -10,8 +13,11 @@ export function setNightModeReducer(state = initialState, action) {
     case TYPES.NIGHT_MODE:
       return {
         ...state,
-        isNightMode: true,
-        navClass: action.payload
+        isNightMode: action.payload.isNightMode,
+        navClass: action.payload.navClass,
+        circlemodeclass: action.payload.circlemodeclass,
+        homeClass: action.payload.homeClass,
+        titleclass: action.payload.titleclass
       };
     default:
       return state;

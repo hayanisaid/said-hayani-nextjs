@@ -6,6 +6,7 @@ import Page from "../components/page";
 import Wrapper from "../components/wrapper";
 import Splitter from "../components/splitter";
 import Scale from "./../components/scale";
+import Circle from "../components/animated-circle";
 
 //import css from "./../styles/sass.scss";
 //const imgProfile = require("./../static/said.png");
@@ -20,6 +21,7 @@ class Home extends React.Component {
   }
 
   componentDidMount() {
+    console.log(this.props);
     //console.log("window height");
     //  console.log(window.innerHeight);
     const margin = 16; // In my case was marginTop: 8px and marginBottom: 8px
@@ -42,15 +44,21 @@ class Home extends React.Component {
         <Page>
           <Head title="Home" style={{ height: this.state.height }} />
           <div
-            className="wrapper home"
+            className={`wrapper  ${this.props.NightMode.homeClass}`}
             onMouseMove={vm => {
               this.HandelSplitterWidth(vm);
             }}
           >
             <div className="desciption">
-              <h1>Hi, This is Said Hayani</h1>
-              <h3>Full Stack Developer, JavaScript enthensiast </h3>
-              <p>I try to do some magic with JavaScript</p>
+              <h1 className={this.props.NightMode.titleclass}>
+                Hi, This is Said Hayani
+              </h1>
+              <h3 className={this.props.NightMode.titleclass}>
+                Full Stack Developer, JavaScript enthensiast{" "}
+              </h3>
+              <p className={this.props.NightMode.titleclass}>
+                I try to do some magic with JavaScript
+              </p>
               <div className="socail-media-links">
                 <ul className="unstyled-list">
                   <li>
@@ -81,7 +89,7 @@ class Home extends React.Component {
               </div>
             </div>
             <div className="picture">
-              <div className="circle" />
+              <Circle name={this.props.NightMode.circlemodeclass} />
               <img src="./../static/images/profile.png" width="200px" />
             </div>
           </div>
@@ -93,5 +101,11 @@ class Home extends React.Component {
   }
 }
 
+const mapStateToProps = state => {
+  return {
+    NightMode: state.NightMode
+  };
+};
+
 //export default Home;
-export default Wrapper(connect(state => state)(Home));
+export default Wrapper(connect(mapStateToProps)(Home));
