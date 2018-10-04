@@ -43,6 +43,11 @@ class Nav extends Component {
       }
     });
   }
+
+  componentDidMount() {
+    console.log("//night mode");
+    console.log(this.props.NightMode.isNightMode);
+  }
   // toggleChecker(event) {toggleChecker
   //   const target = event.target;
   //   const value = target.type === "checkbox" ? target.checked : target.value;
@@ -92,7 +97,7 @@ class Nav extends Component {
                   onChange={this.toggleChecker.bind(this)}
                 />
                 <i />
-                <span>{this.props.NightMode.isNighMode ? "🌙" : "🌞"}</span>
+                <span>{this.props.NightMode.isNightMode ? "🌙" : "🌞"}</span>
               </label>
             </li>
           </ul>
