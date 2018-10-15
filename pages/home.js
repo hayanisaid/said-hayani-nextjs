@@ -17,7 +17,7 @@ class Home extends React.Component {
       width: 0,
       scale: false
     };
-    this.HandelSplitterWidth = this.HandelSplitterWidth.bind(this);
+    //  this.HandelSplitterWidth = this.HandelSplitterWidth.bind(this);
   }
 
   componentDidMount() {
@@ -93,8 +93,8 @@ class Home extends React.Component {
               <img src="./../static/images/profile.png" width="200px" />
             </div>
           </div>
-          {/* splitter */}
-          <Splitter width={this.state.width} />
+
+          {/* <Splitter width={this.state.width} /> */}
         </Page>
       </div>
     );
@@ -109,3 +109,6 @@ const mapStateToProps = state => {
 
 //export default Home;
 export default Wrapper(connect(mapStateToProps)(Home));
+const sayHello = () => {
+  return "hello";
+};

@@ -16,4 +16,11 @@ class App extends React.Component {
     return <Home />;
   }
 }
-export default Wrapper(connect(state => state)(App));
+
+const mapStateToProps = state => {
+  return {
+    openMenu: state.openMenu
+  };
+};
+
+export default Wrapper(connect(mapStateToProps)(App));

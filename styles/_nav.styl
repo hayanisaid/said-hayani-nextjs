@@ -6,8 +6,21 @@
     grid-auto-flow: column;
       max-width: 100%;
       height:100%;
-          width: 20%;
+        width: 20%;
     position: fixed;
+  }
+  @media(max-width:786px){
+    .navigator{
+   grid-column-start: 1;
+    grid-column-end: -1;
+      width: 100%;
+      z-index:2;
+          transform: translateY(600px);
+          display:none
+    }
+    .menu{
+      
+    }
   }
 
   .menu{

@@ -4,6 +4,7 @@ import Nav from "./../components/nav";
 import Head from "./../components/head";
 import Wrapper from "./../components/wrapper";
 import Page from "./../components/page";
+import Placeholder from "./../components/placeholder";
 
 class Stories extends React.Component {
   render() {
@@ -11,7 +12,7 @@ class Stories extends React.Component {
       <div className="blog me">
         <Page>
           <Head title="Contact" />
-          <div>Hello world from Stories</div>
+          <Placeholder name="Stories" />
         </Page>
       </div>
     );
