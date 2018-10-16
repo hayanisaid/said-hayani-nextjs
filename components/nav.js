@@ -28,7 +28,9 @@ class Nav extends Component {
           navClass: "navnightmode",
           circlemodeclass: "circleNight",
           homeClass: "homeNight",
-          titleclass: "titleNight"
+          titleclass: "titleNight",
+          nightBackground: "nighbackground",
+          nightText: "night-text"
         };
         this.props.setNightMode(data);
       } else if (this.state.mode === false) {
@@ -37,7 +39,9 @@ class Nav extends Component {
           navClass: "navdaymode",
           circlemodeclass: "cirlceDay",
           homeClass: "homeDay",
-          titleclass: "titleDay"
+          titleclass: "titleDay",
+          nightBackground: "",
+          nightText: ""
         };
         this.props.setNightMode(data);
       }
@@ -47,6 +51,10 @@ class Nav extends Component {
   componentDidMount() {
     console.log("//night mode");
     console.log(this.props.NightMode.isNightMode);
+  }
+  closeNav() {
+    let nav = document.querySelector(".navigator");
+    nav.classList.remove("toggle");
   }
   // toggleChecker(event) {toggleChecker
   //   const target = event.target;
@@ -63,6 +71,9 @@ class Nav extends Component {
   render() {
     return (
       <div className={`navigator  ${this.props.NightMode.navClass}`}>
+        <span className="close-icon" onClick={this.closeNav.bind(this)}>
+          ❌
+        </span>
         <nav>
           <ul className="menu">
             <li className="menu-item">
@@ -114,7 +125,9 @@ const mapDispatchersToProps = dispatcher => {
 };
 const mapStateToProps = state => {
   return {
-    NightMode: state.NightMode
+    NightMode: state.NightMode,
+    nightBackground: state.NightMode.nightBackground,
+    nightText: state.NightMode.nightText
   };
 };
 

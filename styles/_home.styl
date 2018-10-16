@@ -39,7 +39,6 @@ inline-list{
 .social-media{}
 .socail-media-links .unstyled-list{
     display:flex;
-        display: flex;
   
 }
 .socail-media-links .icon{
@@ -66,6 +65,31 @@ inline-list{
     bottom: 17em;
     left: 33em;
     animation:bounce linear infinite 10s;
+}
+@media(max-width:768px){
+.wrapper{
+    position:relative;
+        padding: 1em;
+}
+.picture{
+    display:flex
+}
+.picture img{
+    height: 5em;
+    width: 5em;
+    -o-object-fit: cover;
+    object-fit: cover;
+    position: absolute;
+    flex: 1;
+    display: flex;
+    border-radius: 100%;
+    background: #f5f5dc;
+    align-self: flex-start;
+    right: 2%;
+    top: 28%;
+}
+
+   
 }
 @keyframes bounce{
 

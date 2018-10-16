@@ -10,18 +10,36 @@
     position: fixed;
   }
   .toggle{
-    display:block !important
+    display:block !important;
+     animation:navmobile .3s linear;
   }
+   .close-icon{
+     display:none;
+   }
   @media(max-width:786px){
     .navigator{
    grid-column-start: 1;
     grid-column-end: -1;
       width: 100%;
-      animation:navmobile .3 linear;
-      z-index:2;
-         
-          display:none
+      animation:navmobile .3s linear;
+      z-index:2;     
+      display:none
     }
+    .close-icon{
+           display:block;
+     position: absolute;
+    right: 2%;
+    bottom:0;
+    margin: 5%;
+    transition:.3s linear;
+     background: #000000;
+    padding: 14px;
+    border-radius: 100%;
+    }
+        .close-icon:focus{
+          transform:scale(1,2)
+        }
+          
     .menu{
      list-style-type: none;
     width: 100%;
@@ -33,12 +51,12 @@
   }
   @keyframes navmobile{
     0%{
-       transform: translateY(600px);
+       transform: translateX(-600px);
          animation-timing-function:cubic-bezier(.17,.67,.83,.67);
     }
     100%{
          animation-timing-function:cubic-bezier(.17,.77,.83,.77);
-       transform: translateY(0px);
+       transform: translateX(0px);
     }
   }
 
@@ -83,16 +101,21 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 1em 0;
     }
     .menu li{
           padding: 1em;
     text-align: center;
-    margin-bottom: 1em;
+    margin-bottom: 1.5em;
     transition: 0.1s linear;
     border-radius: 4px;
     border-bottom: 1px solid #fff;
     width: 100%;
     align-self: center;
+    }
+    .menu li a{
+      font-weight: bold;
+    font-size: 1.6em;
     }
 }
   .form-switch {
@@ -153,16 +176,11 @@
 
 .form-switch input:checked + i::after { transform: translate3d(22px, 2px, 0); }
 
-.blog{
-  background-color:red !important
-}
-.hello{
-    background-color:red !important
-}
+
 .navnightmode{
   background-color:#000000;
   transition:.3s linear;
-  animation: .3s slow linear ;
+
   
 }
 .navnightmode .menu li a{

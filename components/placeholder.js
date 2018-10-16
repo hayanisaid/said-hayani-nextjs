@@ -3,7 +3,7 @@ import React from "react";
 const Placeholder = props => {
   typing("hello world");
   return (
-    <div className="placeholder-container">
+    <div className={`placeholder-container ${props.anyClass}`}>
       <h1>{props.name} Not Available yet 👐</h1>
     </div>
   );

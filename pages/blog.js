@@ -22,7 +22,7 @@ class Blog extends React.Component {
   }
   render() {
     const content = this.state.ready ? (
-      <Placeholder name="Blog" />
+      <Placeholder name="Blog" anyClass={this.props.nightBackground} />
     ) : (
       <div>
         <Head title="blog" />
@@ -83,4 +83,12 @@ class Blog extends React.Component {
   }
 }
 
-export default Wrapper(connect(state => state)(Blog));
+const mapStateToProps = state => {
+  return {
+    NightMode: state.NightMode,
+    nightBackground: state.NightMode.nightBackground,
+    nightText: state.NightMode.nightText
+  };
+};
+
+export default Wrapper(connect(mapStateToProps)(Blog));

@@ -5,7 +5,9 @@ const initialState = {
   navClass: "navdaymode",
   circlemodeclass: "cirlceDay",
   homeClass: "homeDay",
-  titleclass: "titleDay"
+  titleclass: "titleDay",
+  nightBackground: "",
+  nightText: ""
 };
 
 export function setNightModeReducer(state = initialState, action) {
@@ -17,7 +19,9 @@ export function setNightModeReducer(state = initialState, action) {
         navClass: action.payload.navClass,
         circlemodeclass: action.payload.circlemodeclass,
         homeClass: action.payload.homeClass,
-        titleclass: action.payload.titleclass
+        titleclass: action.payload.titleclass,
+        nightBackground: action.payload.nightBackground,
+        nightText: action.payload.nightText
       };
     default:
       return state;
