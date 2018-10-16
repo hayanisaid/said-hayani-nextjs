@@ -12,7 +12,10 @@ class Page extends React.Component {
     super(props);
   }
   openMenu() {
-    this.props.openMenu();
+    //this.props.openMenu();
+    let nav = document.querySelector(".navigator");
+    nav.classList.toggle("toggle");
+    console.log("hello");
   }
   componentDidMount() {
     console.log("menu props");
@@ -22,7 +25,7 @@ class Page extends React.Component {
     return (
       <div className="container">
         <style dangerouslySetInnerHTML={{ __html: style.replace(/\n/g, "") }} />
-        <MobileBtn onclick={this.openMenu.bind(this)} />
+        <MobileBtn onClick={this.openMenu.bind(this)} />
         <Nav />
         <div className="main">{this.props.children}</div>
         {/* <Footer cName="footer" /> */}
