@@ -1,7 +1,10 @@
 import React from "react";
 
 const Placeholder = props => {
-  typing("hello world");
+ let {anyClass}=props
+  if(!anyClass){
+    anyClass=""
+  }
   return (
     <div className={`placeholder-container ${props.anyClass}`}>
       <h1>{props.name} Not Available yet 👐</h1>

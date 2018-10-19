@@ -71,7 +71,11 @@ class Nav extends Component {
   render() {
     return (
       <div className={`navigator  ${this.props.NightMode.navClass}`}>
-        <span className="close-icon" onClick={this.closeNav.bind(this)}>
+        <span
+          className="close-icon"
+          onClick={this.closeNav.bind(this)}
+       
+        >
           ❌
         </span>
         <nav>
