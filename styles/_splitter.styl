@@ -1,0 +1,60 @@
+.spliter{
+    background-position: center;
+    background-repeat: no-repeat;
+    position: fixed;
+    object-fit: cover;
+    background-size: cover;
+border-left:4px solid #fff;
+    background: #000000;
+    right: -20;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    z-index: 2;
+     transition:.1s linear;
+   
+ 
+    overflow:hidden
+
+}
+@media (max-width:768px){
+.spliter{
+    background:red;
+    display:none
+}
+}
+
+.spliter .img img{
+       border-radius:100%;
+       transition:.3s linear;
+       width:48%;
+       align-self:center
+}
+.spliter-wrapper{
+    display:grid;
+    justify-content: center;
+    align-items: center;
+    padding:1em;
+}
+.spliter-wrapper .description{
+
+}
+.spliter-wrapper .description .list{
+    list-style:none;
+    padding:2em
+}
+.spliter-wrapper .description .list li{
+    margin-bottom: 1em;
+    font-family: "Raleway";
+    color: #f8b500;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+
+.spliter h1{
+    color:#c00000;
+    font-family:"Raleway";
+       transition:.3s linear;
+}

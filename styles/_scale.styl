@@ -1,0 +1,29 @@
+.scale{
+    display: flex;
+    justify-content: center;
+}
+.scale img{
+    width:20em;
+    height:20em;
+    border-radius:100%;
+    z-index:3;
+    position:absolute;
+    animation: scale linear 3s infinite
+}
+@keyframes scale{
+    0%{
+        transform:scale(0)
+        width:0;
+        height:0
+    }
+       50%{
+        transform:scale(0.5)
+        width:50%;
+        height:50%
+    }
+        100%{
+        transform:scale(1)
+        width:100%;
+        height:100%
+    }
+}

@@ -1,74 +1,143 @@
-import React from "react";
+import React, { Component } from "react";
 import Link from "next/link";
+import { connect } from "react-redux";
+import Wrapper from "./wrapper";
+import { bindActionCreators } from "redux";
+import { ActionInvorkers } from "./actions/nav.actions";
 
-// const links = [
-//   { href: "https://github.com/segmentio/create-next-app", label: "Github" }
-// ].map(link => {
-//   link.key = `nav-link-${link.href}-${link.label}`;
-//   return link;
-// });
+class Nav extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      mode: false
+    };
+    console.log(this.props);
+  }
 
-const Nav = props => (
-  <div className={props.cName}>
-    <nav>
-      <ul className="menu">
-        <li className="menu-item">
-          <Link href="/">
-            <a>
-              {/* <img
-                src="./../static/icons/home.png"
-                className="nav-icon"
-                width="60"
-                height="60"
-              /> */}
-              Home{" "}
-            </a>
-          </Link>
-        </li>
-        <li className="menu-item">
-          {" "}
-          <Link href="/">
-            <a>Blog</a>
-          </Link>
-        </li>
-        <li className="menu-item">
-          {" "}
-          <Link href="/">
-            <a>
-              Stories{" "}
-              {/* <img
-                src="./../static/images/me.jpeg"
-                className="nav-icon"
-                width="60"
-                height="60"
-              /> */}
-            </a>
-          </Link>
-        </li>
-        <li className="menu-item">
-          {" "}
-          <Link href="/">
-            <a>
-              Contact{" "}
-              {/* <img
-                src="./../static/icons/person.png"
-                className="nav-icon"
-                width="60"
-                height="60"
-              /> */}
-            </a>
-          </Link>
-        </li>
-        <li className="menu-item">
-          <label class="form-switch">
-            <input type="checkbox" />
-            <i />
-            Night Mode
-          </label>
-        </li>
-      </ul>
-    </nav>
-  </div>
+  toggleChecker() {
+    // this.setState(({ mode }) => ({ mode: !mode }));
+    // setTimeout(() => {
+    //   console.log("sss");
+    //   console.log(this.state.mode);
+    // }, 2000);
+
+    this.setState({ mode: !this.state.mode }, () => {
+      if (this.state.mode === true) {
+        const data = {
+          isNightMode: true,
+          navClass: "navnightmode",
+          circlemodeclass: "circleNight",
+          homeClass: "homeNight",
+          titleclass: "titleNight",
+          nightBackground: "nighbackground",
+          nightText: "night-text"
+        };
+        this.props.setNightMode(data);
+      } else if (this.state.mode === false) {
+        const data = {
+          isNightMode: false,
+          navClass: "navdaymode",
+          circlemodeclass: "cirlceDay",
+          homeClass: "homeDay",
+          titleclass: "titleDay",
+          nightBackground: "",
+          nightText: ""
+        };
+        this.props.setNightMode(data);
+      }
+    });
+  }
+
+  componentDidMount() {
+    console.log("//night mode");
+    console.log(this.props.NightMode.isNightMode);
+  }
+  closeNav() {
+    let nav = document.querySelector(".navigator");
+    nav.classList.remove("toggle");
+  }
+  // toggleChecker(event) {toggleChecker
+  //   const target = event.target;
+  //   const value = target.type === "checkbox" ? target.checked : target.value;
+  //   const name = target.name;
+  //   console.log("clicked!!");
+  //   console.log(name);
+  //   this.setState({
+  //     [name]: value
+  //   });
+  //   console.log(this.state.mode);
+  //   // this.props.setNightMode();
+  // }
+  render() {
+    return (
+      <div className={`navigator  ${this.props.NightMode.navClass}`}>
+        <span
+          className="close-icon"
+          onClick={this.closeNav.bind(this)}
+       
+        >
+          ❌
+        </span>
+        <nav>
+          <ul className="menu">
+            <li className="menu-item">
+              <Link href="/home">
+                <a>Home 🏠 </a>
+              </Link>
+            </li>
+            <li className="menu-item">
+              {" "}
+              <Link href="/blog">
+                <a>MyArticles 📘</a>
+              </Link>
+            </li>
+            <li className="menu-item">
+              {" "}
+              <Link href="/stories">
+                <a>Stories 🎥 </a>
+              </Link>
+            </li>
+            <li className="menu-item">
+              {" "}
+              <Link href="/contact">
+                <a>Contact 🙍 </a>
+              </Link>
+            </li>
+            <li className="menu-item">
+              <label className="form-switch">
+                <input
+                  type="checkbox"
+                  ref="switch"
+                  checked={this.state.mode}
+                  onChange={this.toggleChecker.bind(this)}
+                />
+                <i />
+                <span>{this.props.NightMode.isNightMode ? "🌙" : "🌞"}</span>
+              </label>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    );
+  }
+}
+
+//export default Nav;
+
+const mapDispatchersToProps = dispatcher => {
+  return bindActionCreators(ActionInvorkers, dispatcher);
+};
+const mapStateToProps = state => {
+  return {
+    NightMode: state.NightMode,
+    nightBackground: state.NightMode.nightBackground,
+    nightText: state.NightMode.nightText
+  };
+};
+
+export default Wrapper(
+  connect(
+    mapStateToProps,
+    mapDispatchersToProps
+  )(Nav)
 );
-
-export default Nav;

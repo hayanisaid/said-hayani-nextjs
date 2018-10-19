@@ -1,15 +1,23 @@
 .wrapper{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 2em;
-    margin:4em;
+    padding: 4em;
+  
     position: absolute;
     height: 100%;
     overflow:hidden
 }
+.homeNight{
+background:#000000
+}
+.titleNight{
+color:#fff !important
+}
+.titleDay{
+color:#141010 !important
+}
 h1{
     font-family:"Raleway";
-    color:"#0c0000";
     font-size:3em
 }
 h3{
@@ -31,7 +39,6 @@ inline-list{
 .social-media{}
 .socail-media-links .unstyled-list{
     display:flex;
-        display: flex;
   
 }
 .socail-media-links .icon{
@@ -47,7 +54,7 @@ inline-list{
     width: 100%;
     object-fit: cover;
 }
-.picture .circle{
+.picture .cirlceDay{
    background: #eee;
     display: block;
  width:30em;
@@ -58,6 +65,31 @@ inline-list{
     bottom: 17em;
     left: 33em;
     animation:bounce linear infinite 10s;
+}
+@media(max-width:768px){
+.wrapper{
+    position:relative;
+        padding: 1em;
+}
+.picture{
+    display:flex
+}
+.picture img{
+    height: 5em;
+    width: 5em;
+    -o-object-fit: cover;
+    object-fit: cover;
+    position: absolute;
+    flex: 1;
+    display: flex;
+    border-radius: 100%;
+    background: #f5f5dc;
+    align-self: flex-start;
+    right: 2%;
+    top: 28%;
+}
+
+   
 }
 @keyframes bounce{
 
@@ -134,6 +166,18 @@ inline-list{
     height: 100%;
     z-index: 2;
 
+}
+.picture .circleNight{
+background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+    display: block;
+       animation:bounce linear infinite 10s;
+ width:30em;
+        height:30em;
+    position: absolute;
+    z-index: -1;
+    border-radius: 100%;
+    bottom: 17em;
+    left: 33em;
 }
 .spliter img{
     width:100px;
