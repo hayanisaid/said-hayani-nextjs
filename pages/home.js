@@ -7,6 +7,9 @@ import Wrapper from "../components/wrapper";
 import Splitter from "../components/splitter";
 import Scale from "./../components/scale";
 import Circle from "../components/animated-circle";
+import Iphone from "./../components/iphone";
+import Description from "./../components/Description";
+import Picture from "../components/Picture";
 
 //import css from "./../styles/sass.scss";
 //const imgProfile = require("./../static/said.png");
@@ -49,49 +52,8 @@ class Home extends React.Component {
               this.HandelSplitterWidth(vm);
             }}
           >
-            <div className="desciption">
-              <h1 className={this.props.NightMode.titleclass}>
-                Hi, This is Said Hayani
-              </h1>
-              <h3 className={this.props.NightMode.titleclass}>
-                Full Stack Developer, JavaScript enthensiast{" "}
-              </h3>
-              <p className={this.props.NightMode.titleclass}>
-                I try to do some magic with JavaScript
-              </p>
-              <div className="socail-media-links">
-                <ul className="unstyled-list">
-                  <li>
-                    <img
-                      src="./../static/icons/twitter.png"
-                      height="100"
-                      width="100"
-                      className="icon"
-                    />
-                  </li>
-                  <li>
-                    <img
-                      src="./../static/icons/medium.png"
-                      height="100"
-                      width="100"
-                      className="icon"
-                    />
-                  </li>
-                  <li>
-                    <img
-                      src="./../static/icons/instagram.png"
-                      height="100"
-                      width="100"
-                      className="icon"
-                    />
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div className="picture">
-              <Circle name={this.props.NightMode.circlemodeclass} />
-              <img src="./../static/images/profile.png" width="200px" />
-            </div>
+            <Description {...this.props} />
+            <Picture {...this.props} />
           </div>
 
           {/* <Splitter width={this.state.width} /> */}
