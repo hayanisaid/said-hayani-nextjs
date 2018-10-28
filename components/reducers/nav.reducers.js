@@ -7,7 +7,8 @@ const initialState = {
   homeClass: "homeDay",
   titleclass: "titleDay",
   nightBackground: "",
-  nightText: ""
+  nightText: "",
+  whiteBackground: ""
 };
 
 export function setNightModeReducer(state = initialState, action) {
@@ -21,7 +22,8 @@ export function setNightModeReducer(state = initialState, action) {
         homeClass: action.payload.homeClass,
         titleclass: action.payload.titleclass,
         nightBackground: action.payload.nightBackground,
-        nightText: action.payload.nightText
+        nightText: action.payload.nightText,
+        whiteBackground: action.payload.whiteBackground
       };
     default:
       return state;

@@ -33,7 +33,8 @@ class Nav extends Component {
           homeClass: "homeNight",
           titleclass: "titleNight",
           nightBackground: "nighbackground",
-          nightText: "night-text"
+          nightText: "night-text",
+          whiteBackground: "whiteBackground"
         };
         this.props.setNightMode(data);
       } else if (this.state.mode === false) {
@@ -51,7 +52,10 @@ class Nav extends Component {
     });
   }
 
-  componentDidMount() {}
+  componentDidMount() {
+    console.log("//night mode");
+    console.log(this.props.NightMode.isNightMode);
+  }
   closeNav() {
     let nav = document.querySelector(".navigator");
     nav.classList.remove("toggle");
@@ -76,7 +80,12 @@ class Nav extends Component {
         transitionLeaveTimeout={700}
         className={`navigator  ${this.props.NightMode.navClass}`}
       >
-        <span className="close-icon" onClick={this.closeNav.bind(this)}>
+        <span
+          className={`close-icon ${
+            this.props.NightMode ? this.props.NightMode.whiteBackground : null
+          }`}
+          onClick={this.closeNav.bind(this)}
+        >
           ❌
         </span>
         <nav>
