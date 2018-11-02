@@ -52,10 +52,7 @@ class Nav extends Component {
     });
   }
 
-  componentDidMount() {
-    console.log("//night mode");
-    console.log(this.props.NightMode.isNightMode);
-  }
+  componentDidMount() {}
   closeNav() {
     let nav = document.querySelector(".navigator");
     nav.classList.remove("toggle");
