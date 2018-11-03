@@ -21,6 +21,12 @@ display:flex;
     background-repeat: no-repeat;
 
 }
+.night_card{
+     border: 0.5px solid #676767 !important;
+    border-radius: 10px  !important;
+    background: #000  !important;
+    padding: 7px  !important;   
+}
 .header_image{
       width: 25em;
 
@@ -42,6 +48,18 @@ display:flex;
     grid-template-columns:1fr 1fr 1fr;
     grid-template-rows: repeat(minmax(100px, auto),1fr)   ;
     grid-gap:1em
+}
+@media(max-width:768px){
+    .cards{
+  display:grid;
+    grid-template-columns:1fr ;
+    grid-template-rows: repeat(minmax(100px, auto),1fr)   ;
+    grid-gap:1em
+    }
+    .header_image{
+        width: 7em;
+    }
+   
 }
 .card{
  

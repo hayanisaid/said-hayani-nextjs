@@ -62,30 +62,36 @@ class Blog extends React.Component {
               <Card
                 title="JavaScript write less do more"
                 image="./../static/images/me.jpeg"
+                nightMode={this.props.NightMode ? this.props.NightMode : null}
                 description="this is the description of my Articles"
               />
               <Card
                 title="JavaScript write less do more"
+                image="./../static/images/me.jpeg"
+                nightMode={this.props.NightMode ? this.props.NightMode : null}
+                description="this is the description of my Articles"
+              />
+              <Card
+                title="JavaScript write less do more"
+                image="./../static/images/me.jpeg"
+                nightMode={this.props.NightMode ? this.props.NightMode : null}
+                description="this is the description of my Articles"
+              />
+              <Card
+                title="JavaScript write less do more"
+                nightMode={this.props.NightMode ? this.props.NightMode : null}
                 image="./../static/images/me.jpeg"
                 description="this is the description of my Articles"
               />
               <Card
                 title="JavaScript write less do more"
                 image="./../static/images/me.jpeg"
+                nightMode={this.props.NightMode ? this.props.NightMode : null}
                 description="this is the description of my Articles"
               />
               <Card
                 title="JavaScript write less do more"
-                image="./../static/images/me.jpeg"
-                description="this is the description of my Articles"
-              />
-              <Card
-                title="JavaScript write less do more"
-                image="./../static/images/me.jpeg"
-                description="this is the description of my Articles"
-              />
-              <Card
-                title="JavaScript write less do more"
+                nightMode={this.props.NightMode ? this.props.NightMode : null}
                 image="./../static/images/me.jpeg"
                 description="this is the description of my Articles"
               />
@@ -108,7 +114,8 @@ const mapStateToProps = state => {
   return {
     NightMode: state.NightMode,
     nightBackground: state.NightMode.nightBackground,
-    nightText: state.NightMode.nightText
+    nightText: state.NightMode.nightText,
+    nightCard: state.NightMode.night_card
   };
 };
 

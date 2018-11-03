@@ -34,6 +34,7 @@ class Nav extends Component {
           titleclass: "titleNight",
           nightBackground: "nighbackground",
           nightText: "night-text",
+          night_card: "night_card",
           whiteBackground: "whiteBackground"
         };
         this.props.setNightMode(data);
