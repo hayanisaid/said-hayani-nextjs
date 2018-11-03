@@ -1,9 +1,9 @@
 import React from "react";
 
 const Placeholder = props => {
- let {anyClass}=props
-  if(!anyClass){
-    anyClass=""
+  let { anyClass } = props;
+  if (!anyClass) {
+    anyClass = "";
   }
   return (
     <div className={`placeholder-container ${props.anyClass}`}>
