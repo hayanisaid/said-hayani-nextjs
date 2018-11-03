@@ -84,7 +84,7 @@ class Nav extends Component {
           }`}
           onClick={this.closeNav.bind(this)}
         >
-          ❌
+          x
         </span>
         <nav>
           <ul className="menu">
