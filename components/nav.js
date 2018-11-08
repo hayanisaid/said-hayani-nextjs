@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import Wrapper from "./wrapper";
 import { bindActionCreators } from "redux";
 import { ActionInvorkers } from "./actions/nav.actions";
+import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 
 class Nav extends Component {
   constructor(props) {
@@ -14,12 +15,14 @@ class Nav extends Component {
     console.log(this.props);
   }
 
-  toggleChecker() {
+  toggleChecker(e) {
     // this.setState(({ mode }) => ({ mode: !mode }));
     // setTimeout(() => {
     //   console.log("sss");
     //   console.log(this.state.mode);
     // }, 2000);
+
+    e.stopPropagation();
 
     this.setState({ mode: !this.state.mode }, () => {
       if (this.state.mode === true) {
@@ -30,7 +33,9 @@ class Nav extends Component {
           homeClass: "homeNight",
           titleclass: "titleNight",
           nightBackground: "nighbackground",
-          nightText: "night-text"
+          nightText: "night-text",
+          night_card: "night_card",
+          whiteBackground: "whiteBackground"
         };
         this.props.setNightMode(data);
       } else if (this.state.mode === false) {
@@ -48,10 +53,7 @@ class Nav extends Component {
     });
   }
 
-  componentDidMount() {
-    console.log("//night mode");
-    console.log(this.props.NightMode.isNightMode);
-  }
+  componentDidMount() {}
   closeNav() {
     let nav = document.querySelector(".navigator");
     nav.classList.remove("toggle");
@@ -70,13 +72,19 @@ class Nav extends Component {
   // }
   render() {
     return (
-      <div className={`navigator  ${this.props.NightMode.navClass}`}>
+      <ReactCSSTransitionGroup
+        transitionName="example"
+        transitionEnterTimeout={500}
+        transitionLeaveTimeout={700}
+        className={`navigator  ${this.props.NightMode.navClass}`}
+      >
         <span
-          className="close-icon"
+          className={`close-icon ${
+            this.props.NightMode ? this.props.NightMode.whiteBackground : null
+          }`}
           onClick={this.closeNav.bind(this)}
-       
         >
-          ❌
+          x
         </span>
         <nav>
           <ul className="menu">
@@ -117,7 +125,7 @@ class Nav extends Component {
             </li>
           </ul>
         </nav>
-      </div>
+      </ReactCSSTransitionGroup>
     );
   }
 }

@@ -29,8 +29,6 @@ class Page extends React.Component {
         <Nav />
         <div className="main">{this.props.children}</div>
         {/* <Footer cName="footer" /> */}
-
-        <style jsx>{``}</style>
       </div>
     );
   }

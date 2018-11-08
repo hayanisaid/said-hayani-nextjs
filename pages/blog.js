@@ -6,18 +6,19 @@ import Page from "./../components/page";
 import Wrapper from "./../components/wrapper";
 import Card from "./../components/card";
 import Placeholder from "./../components/placeholder";
-//const imag = require("./../static/images/me.jpeg");
+//import sketch from "./../static/images/me.jpeg";
+//const imag = require("./../static/images/said-sketch-v3.jpg");
 
 class Blog extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      ready: true
+      ready: false
     };
   }
   componentDidMount() {
-    console.log("process");
+    console.log("process", this.props);
     console.log(process.env.URL);
   }
   render() {
@@ -26,14 +27,34 @@ class Blog extends React.Component {
     ) : (
       <div>
         <Head title="blog" />
-        <div className="blog-wrapper">
+        <div
+          className={`blog-wrapper ${
+            this.props.NightMode ? this.props.nightBackground : null
+          }`}
+        >
           <div className="header">
-            <div className="description">
-              <h1>My Articles </h1>
-              <h2>
+            <div className="header_description">
+              <h1
+                className={`${
+                  this.props.NightMode ? this.props.nightText : null
+                }`}
+              >
+                Blog
+              </h1>
+              <p
+                className={`description_paragraph ${
+                  this.props.NightMode ? this.props.nightText : null
+                }`}
+              >
                 Writting Articles About allows me to explore the hype of
                 technology {process.env.URL}
-              </h2>
+              </p>
+            </div>
+            <div className="header_media">
+              <img
+                src="./../static/images/said-sketch-v3.png"
+                className="header_image"
+              />
             </div>
           </div>
           <div className="cards">
@@ -41,30 +62,36 @@ class Blog extends React.Component {
               <Card
                 title="JavaScript write less do more"
                 image="./../static/images/me.jpeg"
+                nightMode={this.props.NightMode ? this.props.NightMode : null}
                 description="this is the description of my Articles"
               />
               <Card
                 title="JavaScript write less do more"
+                image="./../static/images/me.jpeg"
+                nightMode={this.props.NightMode ? this.props.NightMode : null}
+                description="this is the description of my Articles"
+              />
+              <Card
+                title="JavaScript write less do more"
+                image="./../static/images/me.jpeg"
+                nightMode={this.props.NightMode ? this.props.NightMode : null}
+                description="this is the description of my Articles"
+              />
+              <Card
+                title="JavaScript write less do more"
+                nightMode={this.props.NightMode ? this.props.NightMode : null}
                 image="./../static/images/me.jpeg"
                 description="this is the description of my Articles"
               />
               <Card
                 title="JavaScript write less do more"
                 image="./../static/images/me.jpeg"
+                nightMode={this.props.NightMode ? this.props.NightMode : null}
                 description="this is the description of my Articles"
               />
               <Card
                 title="JavaScript write less do more"
-                image="./../static/images/me.jpeg"
-                description="this is the description of my Articles"
-              />
-              <Card
-                title="JavaScript write less do more"
-                image="./../static/images/me.jpeg"
-                description="this is the description of my Articles"
-              />
-              <Card
-                title="JavaScript write less do more"
+                nightMode={this.props.NightMode ? this.props.NightMode : null}
                 image="./../static/images/me.jpeg"
                 description="this is the description of my Articles"
               />
@@ -87,7 +114,8 @@ const mapStateToProps = state => {
   return {
     NightMode: state.NightMode,
     nightBackground: state.NightMode.nightBackground,
-    nightText: state.NightMode.nightText
+    nightText: state.NightMode.nightText,
+    nightCard: state.NightMode.night_card
   };
 };
 

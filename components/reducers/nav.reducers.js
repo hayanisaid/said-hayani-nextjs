@@ -7,21 +7,37 @@ const initialState = {
   homeClass: "homeDay",
   titleclass: "titleDay",
   nightBackground: "",
-  nightText: ""
+  nightText: "",
+  whiteBackground: "",
+  night_card: ""
 };
 
 export function setNightModeReducer(state = initialState, action) {
+  console.log("action", action);
+  let {
+    isNightMode,
+    navClass,
+    circlemodeclass,
+    homeClass,
+    titleclass,
+    nightBackground,
+    nightText,
+    whiteBackground,
+    night_card
+  } = action.payload ? action.payload : "";
   switch (action.type) {
     case TYPES.NIGHT_MODE:
       return {
         ...state,
-        isNightMode: action.payload.isNightMode,
-        navClass: action.payload.navClass,
-        circlemodeclass: action.payload.circlemodeclass,
-        homeClass: action.payload.homeClass,
-        titleclass: action.payload.titleclass,
-        nightBackground: action.payload.nightBackground,
-        nightText: action.payload.nightText
+        isNightMode: isNightMode,
+        navClass: navClass,
+        circlemodeclass: circlemodeclass,
+        homeClass: homeClass,
+        titleclass: titleclass,
+        nightBackground: nightBackground,
+        nightText: nightText,
+        whiteBackground: whiteBackground,
+        night_card: night_card
       };
     default:
       return state;

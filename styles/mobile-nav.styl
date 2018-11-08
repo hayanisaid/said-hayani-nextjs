@@ -9,6 +9,7 @@
     justify-items: center;
     bottom: 0;
     display:none;
+    outline:none
 
 }
 @media(max-width:768px){
@@ -20,7 +21,17 @@
     align-self: center;
     flex-direction: column;
     justify-items: center;
+      outline:none
     }
+      .my-enter{
+    background:green;
+  }
+  .my-active-enter{
+    background:yellow
+  }
+  .my-active-exit{
+    background:blue
+  }
 }
 
 button{
@@ -35,6 +46,8 @@ button{
     /* display: flex; */
     bottom: 0;
     position: fixed;
+    outline:none;
+    cursor:pointer
    
 }
 @media(max-width:768px){
@@ -46,6 +59,7 @@ button{
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     border: 0;
+    cursor:pointer;
 
     /* display: flex; */
     position: fixed;
