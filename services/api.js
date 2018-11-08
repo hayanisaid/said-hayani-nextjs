@@ -7,7 +7,6 @@ const headers = {
   "Content-Type": "application/json"
 };
 const api = axois.create({
-  baseURL: BASE_URL,
   headers
 });
 

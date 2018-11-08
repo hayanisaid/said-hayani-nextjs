@@ -11,6 +11,7 @@ class Iphone extends React.Component {
     let result = axios.get(url);
     if (result) {
       this.setState(state => ({ ...state, isLoaded: true }));
+      console.log("result==>", result);
     }
   }
   componentDidMount() {

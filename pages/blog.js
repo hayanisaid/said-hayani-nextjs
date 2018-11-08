@@ -8,6 +8,10 @@ import Card from "./../components/card";
 import Placeholder from "./../components/placeholder";
 //import sketch from "./../static/images/me.jpeg";
 //const imag = require("./../static/images/said-sketch-v3.jpg");
+const url = "https://medium.com/@saidhayani";
+
+import { getPosts } from "./../services/http";
+import axios from "axios";
 
 class Blog extends React.Component {
   constructor(props) {
@@ -17,12 +21,31 @@ class Blog extends React.Component {
       ready: false
     };
   }
+
+  getMediumPost() {
+    const headers = {
+      "Access-Control-Allow-Origin": "*",
+      Accept: "application/json",
+      "Content-Type": "application/x-www-form-urlencoded"
+    };
+    axios({
+      method: "get",
+      url: url,
+      responseType: "json"
+    })
+      .then(data => {
+        console.log("data pub");
+        console.log(data);
+      })
+      .catch(err => {
+        console.log("err==", err);
+      });
+  }
   componentDidMount() {
-    console.log("process", this.props);
-    console.log(process.env.URL);
+    //   this.getMediumPost();
   }
   render() {
-    const content = this.state.ready ? (
+    const content = !this.state.ready ? (
       <Placeholder name="Blog" anyClass={this.props.nightBackground} />
     ) : (
       <div>
@@ -47,13 +70,14 @@ class Blog extends React.Component {
                 }`}
               >
                 Writting Articles About allows me to explore the hype of
-                technology {process.env.URL}
+                technology
               </p>
             </div>
             <div className="header_media">
               <img
                 src="./../static/images/said-sketch-v3.png"
                 className="header_image"
+                alt="Said Hayani sketch image"
               />
             </div>
           </div>
