@@ -6,6 +6,7 @@
     min-height: 100%;
  
   }
+
 .nighbackground{
     background-color:#000000
 }
@@ -39,4 +40,34 @@
     grid-row-end: 3;
   
     }
+  
   }
+// on larg screens
+@media (min-width:1000px){
+  .container{
+    background:red;
+    grid-template-columns: 1fr 5fr;
+    display:grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 4fr;
+    width: 100%;
+    min-height: 100%;
+    }
+    .main {
+    background: #fff;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  
+    }
+    .wrapper{
+          display: grid;
+    grid-template-columns: 5fr 6fr 1fr;
+    grid-column-start: 1;
+    padding: 1em;
+    position: absolute;
+    height: 100%;
+    overflow: hidden;
+    }
+}
