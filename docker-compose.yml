@@ -8,4 +8,4 @@ services:
     container_name: my-website
     restart: always
     ports:
-     - "3030:5000"
+     - "3030:3000"

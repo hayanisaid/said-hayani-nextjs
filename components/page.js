@@ -23,7 +23,11 @@ class Page extends React.Component {
   }
   render() {
     return (
-      <div className="container">
+      <div
+        className={`container ${
+          this.props.NightMode !== undefined ? this.props.nightBackground : null
+        }`}
+      >
         <style dangerouslySetInnerHTML={{ __html: style.replace(/\n/g, "") }} />
         <MobileBtn onClick={this.openMenu.bind(this)} />
         <Nav />
@@ -35,7 +39,11 @@ class Page extends React.Component {
 }
 const mapStateToProps = state => {
   return {
-    openMenu: state.openMenu
+    openMenu: state.openMenu,
+    NightMode: state.NightMode,
+    nightBackground: state.NightMode.nightBackground,
+    nightText: state.NightMode.nightText,
+    nightCard: state.NightMode.night_card
   };
 };
 const mapDispatchersToProps = dispatcher => {

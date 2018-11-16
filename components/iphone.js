@@ -10,10 +10,15 @@ class Iphone extends React.Component {
     let url = "https://medium.com/@saidhayani";
     let result = axios.get(url);
     if (result) {
-      this.setState(state => ({ ...state, isLoaded: true }));
-      console.log("result==>", result);
+      setTimeout(() => {
+        this.setState(state => ({ ...state, isLoaded: true }));
+      }, 5000);
     }
   }
+  //disable click on preview
+  handleClick = () => {
+    return false;
+  };
   componentDidMount() {
     this.loadMeduimProfile();
   }
@@ -25,7 +30,7 @@ class Iphone extends React.Component {
           alt="iphone wrapper"
           className="iphone"
         /> */}
-        <div className="preview">
+        <div className="preview" onClick={this.handleClick}>
           {this.state.isLoaded ? (
             <object
               className="img_preview"
