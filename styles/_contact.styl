@@ -7,14 +7,7 @@
     animation:slideDown .3s linear;
     animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1)
 }
-@keyframes slideDown{
-    0%{
-        transform: translateY(20px)
-    }
-    100%{
-        transform: translateY(0px)
-    }
-}
+
 .contact-container h1{
     font-family:"Raleway";
     color:#888;
@@ -40,6 +33,12 @@ padding:.5em
 }
 @media (min-width:1000px){
     .contact-container{
-     
+      display: flex;
+    padding: 1em;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    position: fixed;
+    flex-direction: column;
     }
 }

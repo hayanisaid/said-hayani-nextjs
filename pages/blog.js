@@ -46,12 +46,15 @@ class Blog extends React.Component {
   }
   render() {
     const content = !this.state.ready ? (
-      <Placeholder name="Blog" anyClass={this.props.nightBackground} />
+      <Placeholder
+        name="Blog"
+        anyClass={this.props.NightMode ? this.props.nightBackground : null}
+      />
     ) : (
       <div>
         <Head title="blog" />
         <div
-          className={`blog-wrapper ${
+          className={`blog-wrapper  ${
             this.props.NightMode ? this.props.nightBackground : null
           }`}
         >
@@ -126,11 +129,7 @@ class Blog extends React.Component {
       </div>
     );
 
-    return (
-      <div className="blog ">
-        <Page>{content}</Page>
-      </div>
-    );
+    return <Page>{content}</Page>;
   }
 }
 
