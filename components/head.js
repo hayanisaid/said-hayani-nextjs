@@ -4,7 +4,7 @@ import { string } from "prop-types";
 
 const defaultDescription = "Said Hayani official website";
 const defaultOGURL = "https://saidhayani.me";
-const defaultOGImage = "https://saidhayani.me/./../said-hayani.png";
+const defaultOGImage = "./../said-hayani.png";
 
 const Head = props => (
   <NextHead>
