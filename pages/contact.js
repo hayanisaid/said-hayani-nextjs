@@ -36,8 +36,8 @@ class Contact extends React.Component {
                   }
                 >
                   {" "}
-                  🔴 You would like to work with me send me email 📫 Via{" "}
-                  <a href="#">info.said.dev@gmail.com</a>
+                  🔴 Would you like to work with me? you can send me email 📫
+                  Via <a href="#">info.said.dev@gmail.com</a>
                 </li>
                 <li
                   className={
@@ -47,8 +47,10 @@ class Contact extends React.Component {
                   }
                 >
                   {" "}
-                  🔴 You need consultation or you have quetion for me send me
-                  email 📫 via <a href="#">info.said.dev@gmail.com</a>{" "}
+                  🔴 You need consultation or you have question for me? you can
+                  send me email 📫 via <a href="#">
+                    info.said.dev@gmail.com
+                  </a>{" "}
                 </li>
                 <li
                   className={
@@ -58,8 +60,8 @@ class Contact extends React.Component {
                   }
                 >
                   {" "}
-                  🔴 I got <a href="#"> Twitter🐦</a> you can find me there{" "}
-                  <a href="#">@saidHYN</a>{" "}
+                  🔴 You can always find me on Twitter🐦{" "}
+                  <a href="https://twitter.com/SaidHYN">@saidHYN</a>{" "}
                 </li>
                 <li
                   className={
@@ -69,8 +71,8 @@ class Contact extends React.Component {
                   }
                 >
                   {" "}
-                  🔴 And don't foget to check my profile on{" "}
-                  <a href="#">Medium 📖</a>{" "}
+                  🔴 You can find all my articles on{" "}
+                  <a href="https://medium.com/@saidhayani">Medium 📖</a>{" "}
                 </li>
                 <li
                   className={
@@ -80,8 +82,9 @@ class Contact extends React.Component {
                   }
                 >
                   {" "}
-                  🔴 You can get free consultation when you subscribe to weekly
-                  web news letter 📬 <a href="#"> Subscribe</a>
+                  🔴 You can get free consultation related to the FrontEnd
+                  Development when you subscribe to my weekly web News-letter 📬{" "}
+                  <a href="http://eepurl.com/dk9OJL"> Subscribe</a>
                 </li>
               </ul>
             </div>

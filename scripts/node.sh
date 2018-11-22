@@ -1,0 +1,1 @@
+docker run -d --name app -p 5000:5000 node:latest
