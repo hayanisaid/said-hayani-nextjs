@@ -25,7 +25,7 @@ class Contact extends React.Component {
                 : null
             }`}
           >
-            <h1>Just Say a little Hi 🙋‍♂</h1>
+            <h1> Hi there 🙋‍♂</h1>
             <div className="contact-list">
               <ul className="list-unstyled">
                 <li
