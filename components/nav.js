@@ -11,7 +11,6 @@ class Nav extends Component {
     this.state = {
       mode: false
     };
-    console.log(this.props);
   }
 
   toggleChecker(e) {
