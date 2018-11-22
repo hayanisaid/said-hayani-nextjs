@@ -1,4 +1,5 @@
 import React from "react";
+//import placeholderImage from ;
 
 const Placeholder = props => {
   let { anyClass } = props;
@@ -7,7 +8,12 @@ const Placeholder = props => {
   }
   return (
     <div className={`placeholder-container ${props.anyClass}`}>
-      <h1>{props.name} Not Available yet 👐</h1>
+      <img
+        src="../static/images/placeholder.svg"
+        className="placeholder_img"
+        width={300}
+      />
+      <h4>{props.name} Not Available yet 👐</h4>
     </div>
   );
 };
