@@ -4,7 +4,6 @@ import { connect } from "react-redux";
 import Wrapper from "./wrapper";
 import { bindActionCreators } from "redux";
 import { ActionInvorkers } from "./actions/nav.actions";
-import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 
 class Nav extends Component {
   constructor(props) {
@@ -12,7 +11,6 @@ class Nav extends Component {
     this.state = {
       mode: false
     };
-    console.log(this.props);
   }
 
   toggleChecker(e) {
@@ -72,12 +70,7 @@ class Nav extends Component {
   // }
   render() {
     return (
-      <ReactCSSTransitionGroup
-        transitionName="example"
-        transitionEnterTimeout={500}
-        transitionLeaveTimeout={700}
-        className={`navigator  ${this.props.NightMode.navClass}`}
-      >
+      <nav className={`navigator  ${this.props.NightMode.navClass}`}>
         <span
           className={`close-icon ${
             this.props.NightMode ? this.props.NightMode.whiteBackground : null
@@ -125,7 +118,7 @@ class Nav extends Component {
             </li>
           </ul>
         </nav>
-      </ReactCSSTransitionGroup>
+      </nav>
     );
   }
 }

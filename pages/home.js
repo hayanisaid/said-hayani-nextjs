@@ -10,13 +10,13 @@ import Wrapper from "../components/wrapper";
 // import Circle from "../components/animated-circle";
 // import Iphone from "./../components/iphone";
 //import Description from "./../components/Description";
-//import Picture from "../components/Picture";
+import Picture from "../components/Picture";
 const Description = dynamic(import("./../components/Description"), {
   loading: () => <div>.... loading</div>
 });
-const Picture = dynamic(import("../components/Picture"), {
-  loading: () => <div>.... loading</div>
-});
+// const Picture = dynamic(import("../components/Picture"), {
+//   loading: () => <div>.... loading</div>
+// });
 
 //import css from "./../styles/sass.scss";
 //const imgProfile = require("./../static/said.png");
