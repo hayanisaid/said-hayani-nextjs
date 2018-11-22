@@ -5,10 +5,10 @@ const Description = ({ NightMode }) => (
   <div className="desciption_wrapper">
     <h1 className={NightMode.titleclass}>Hi, This is Said Hayani</h1>
     <h3 className={NightMode.titleclass}>
-      Full Stack Developer, JavaScript enthensiast{" "}
+      FrontEnd Software Developer| technical Writer | instructor{" "}
     </h3>
     <p className={NightMode.titleclass}>
-      I try to do some magic with JavaScript
+      I dedicate my time to teach JavaScript for beginners
     </p>
     <SoMedia />
   </div>

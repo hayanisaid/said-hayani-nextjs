@@ -1,9 +1,11 @@
 .container {
     display:grid;
+     background: #fff;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 4fr;
     width: 100%;
     min-height: 100%;
+    
  
   }
 
@@ -16,9 +18,8 @@
   .main {
     background: #fff;
     grid-column-start: 2;
-    grid-column-end: 4;
     grid-row-start: 1;
-    grid-row-end: 3;
+
   }
   .footer {
     grid-column-start: 2;
@@ -33,7 +34,7 @@
   @media (max-width:758px){
 
         .main {
-    background: #fff;
+   
     grid-column-start: 1;
     grid-column-end: 4;
     grid-row-start: 1;
@@ -45,16 +46,15 @@
 // on larg screens
 @media (min-width:1000px){
   .container{
-    background:red;
-    grid-template-columns: 1fr 5fr;
-    display:grid;
+   display:grid;
+     background: #fff;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 4fr;
     width: 100%;
     min-height: 100%;
     }
     .main {
-    background: #fff;
+   
     grid-column-start: 2;
     grid-column-end: 4;
     grid-row-start: 1;

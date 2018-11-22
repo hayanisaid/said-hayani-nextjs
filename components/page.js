@@ -7,6 +7,7 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import Wrapper from "./wrapper";
 import { ActionInvorkers } from "./actions/menu.action";
+
 class Page extends React.Component {
   constructor(props) {
     super(props);
@@ -15,11 +16,9 @@ class Page extends React.Component {
     //this.props.openMenu();
     let nav = document.querySelector(".navigator");
     nav.classList.toggle("toggle");
-    console.log("hello");
   }
   componentDidMount() {
-    console.log("menu props");
-    console.log(this.props);
+    document.querySelector(".container").style.width = window.innerWidth;
   }
   render() {
     return (

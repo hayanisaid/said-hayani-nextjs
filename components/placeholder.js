@@ -1,17 +1,15 @@
 import React from "react";
-//import placeholderImage from ;
 
 const Placeholder = props => {
   let { anyClass } = props;
   if (!anyClass) {
-    anyClass = "";
+    anyClass = null;
   }
   return (
     <div className={`placeholder-container ${props.anyClass}`}>
       <img
-        src="../static/images/placeholder.svg"
+        src="./../static/images/placeholder.svg"
         className="placeholder_img"
-        width={300}
       />
       <h4>{props.name} Not Available yet 👐</h4>
     </div>

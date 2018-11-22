@@ -8,9 +8,7 @@ const Home = dynamic(import("./home"), {
   loading: () => <div>.... loading</div>
 });
 class App extends React.Component {
-  componentDidMount = () => {
-    console.log(this.props);
-  };
+  componentDidMount = () => {};
 
   render() {
     return <Home />;

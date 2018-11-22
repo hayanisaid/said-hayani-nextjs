@@ -9,12 +9,14 @@ import Page from "./../components/page";
 class Contact extends React.Component {
   render() {
     return (
-      <div
-        className={`blog me ${
-          this.props.NightMode !== undefined ? this.props.nightBackground : null
-        }`}
-      >
-        <Page>
+      <Page>
+        <div
+          className={`blog me ${
+            this.props.NightMode !== undefined
+              ? this.props.nightBackground
+              : null
+          }`}
+        >
           <Head title="Contact" />
           <div
             className={`contact-container ${
@@ -84,8 +86,8 @@ class Contact extends React.Component {
               </ul>
             </div>
           </div>
-        </Page>
-      </div>
+        </div>
+      </Page>
     );
   }
 }
