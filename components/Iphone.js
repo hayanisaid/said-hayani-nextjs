@@ -6,13 +6,13 @@ class Iphone extends React.Component {
     isLoaded: false
   };
   async loadMeduimProfile() {
-    //let url = "https://medium.com/@saidhayani";
-    // let result = axios.get(url);
-    // if (result) {
+    let url = "https://www.saidhayani.me/";
+    let result = axios.get(url);
+     if (result) {
     setTimeout(() => {
       this.setState(state => ({ ...state, isLoaded: true }));
-    }, 5000);
-    //}
+    }, 3000);
+    }
   }
   //disable click on preview
   handleClick = () => {
