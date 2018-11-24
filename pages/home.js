@@ -3,8 +3,9 @@ import { connect } from "react-redux";
 //import Link from "next/link";
 import Head from "../components/head";
 import dynamic from "next/dynamic";
-import Page from "../components/page";
-import Wrapper from "../components/wrapper";
+import Page from "../components/Page";
+import Wrapper from "../components/Wrapper";
+import Loading from "../components/Loading";
 // import Splitter from "../components/splitter";
 // import Scale from "./../components/scale";
 // import Circle from "../components/animated-circle";
@@ -12,7 +13,7 @@ import Wrapper from "../components/wrapper";
 //import Description from "./../components/Description";
 import Picture from "../components/Picture";
 const Description = dynamic(import("./../components/Description"), {
-  loading: () => <div>.... loading</div>
+  loading: () => <Loading />
 });
 // const Picture = dynamic(import("../components/Picture"), {
 //   loading: () => <div>.... loading</div>

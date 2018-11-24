@@ -1,10 +1,9 @@
 import React from "react";
 import { connect } from "react-redux";
-import Nav from "./../components/nav";
 import Head from "./../components/head";
-import Page from "./../components/page";
-import Wrapper from "./../components/wrapper";
-import Card from "./../components/card";
+import Page from "./../components/Page";
+import Wrapper from "./../components/Wrapper";
+import Card from "./../components/Card";
 import Placeholder from "./../components/placeholder";
 //import sketch from "./../static/images/me.jpeg";
 //const imag = require("./../static/images/said-sketch-v3.jpg");
