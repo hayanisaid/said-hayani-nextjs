@@ -20,7 +20,7 @@ const Head = props => (
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./../static/favicon-32x32.png"
+      href="/static/favicon-32x32.png"
     />
     <link
       rel="icon"
@@ -44,24 +44,9 @@ const Head = props => (
     <meta property="og:image" content={props.ogImage || defaultOGImage} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
+    <link rel="stylesheet" type="text/css" href="/static/nprogress.css" />
   </NextHead>
 );
-import NProgress from "nprogress";
-import Router from "next/router";
-NProgress.configure({
-  template: "<div class='....'>loading...</div>"
-});
-
-Router.onRouteChangeStart = () => {
-  NProgress.start();
-};
-Router.onRouteChangeComplet = () => {
-  NProgress.done();
-};
-Router.onRouteChangeError = () => {
-  NProgress.done();
-  console.log("router Error");
-};
 
 Head.propTypes = {
   title: string,

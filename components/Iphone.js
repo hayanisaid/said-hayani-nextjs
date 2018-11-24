@@ -1,5 +1,4 @@
 import React from "react";
-import Placeholder from "./placeholder";
 import axios from "axios";
 
 class Iphone extends React.Component {
@@ -37,6 +36,7 @@ class Iphone extends React.Component {
               type="text/html"
               data="https://medium.com/@saidhayani"
               style={{ width: "100%", height: "100%" }}
+              onClick={() => false}
             />
           ) : (
             <div className="iphone_placeholder">

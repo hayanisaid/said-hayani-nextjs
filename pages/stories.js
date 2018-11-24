@@ -1,10 +1,9 @@
 import React from "react";
 import { connect } from "react-redux";
-import Nav from "./../components/nav";
-import Head from "./../components/head";
-import Wrapper from "./../components/wrapper";
-import Page from "./../components/page";
-import Placeholder from "./../components/placeholder";
+import Head from "./../components/Head";
+import Wrapper from "./../components/Wrapper";
+import Page from "./../components/Page";
+import Placeholder from "./../components/Placeholder";
 
 class Stories extends React.Component {
   constructor(props) {

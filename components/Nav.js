@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Link from "next/link";
 import { connect } from "react-redux";
-import Wrapper from "./wrapper";
+import Wrapper from "./Wrapper";
 import { bindActionCreators } from "redux";
 import { ActionInvorkers } from "./actions/nav.actions";
 
@@ -89,7 +89,7 @@ class Nav extends Component {
             <li className="menu-item">
               {" "}
               <Link href="/blog">
-                <a>MyArticles 📘</a>
+                <a>Blog 📘</a>
               </Link>
             </li>
             <li className="menu-item">

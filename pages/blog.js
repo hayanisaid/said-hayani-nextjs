@@ -1,11 +1,10 @@
 import React from "react";
 import { connect } from "react-redux";
-import Nav from "./../components/nav";
-import Head from "./../components/head";
-import Page from "./../components/page";
-import Wrapper from "./../components/wrapper";
-import Card from "./../components/card";
-import Placeholder from "./../components/placeholder";
+import Head from "./../components/Head";
+import Page from "./../components/Page";
+import Wrapper from "./../components/Wrapper";
+import Card from "./../components/Card";
+import Placeholder from "./../components/Placeholder";
 //import sketch from "./../static/images/me.jpeg";
 //const imag = require("./../static/images/said-sketch-v3.jpg");
 const url = "https://medium.com/@saidhayani";
@@ -34,12 +33,9 @@ class Blog extends React.Component {
       responseType: "json"
     })
       .then(data => {
-        console.log("data pub");
-        console.log(data);
+        // console.log("data pub");
       })
-      .catch(err => {
-        console.log("err==", err);
-      });
+      .catch(err => {});
   }
   componentDidMount() {
     //   this.getMediumPost();

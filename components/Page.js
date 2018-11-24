@@ -1,12 +1,23 @@
 import React from "react";
-import Nav from "./nav";
-import Footer from "./footer";
+import Nav from "./Nav";
 import style from "../styles/style.styl";
-import MobileBtn from "./mobilebtn";
+import MobileBtn from "./Mobilebtn";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
-import Wrapper from "./wrapper";
 import { ActionInvorkers } from "./actions/menu.action";
+import Router from "next/router";
+import NProgress from "nprogress";
+NProgress.configure({ easing: "ease", speed: 500, trickleSpeed: 200 });
+
+Router.onRouteChangeStart = () => {
+  NProgress.start();
+};
+Router.onRouteChangeComplete = () => {
+  NProgress.done();
+};
+Router.onRouteChangeError = () => {
+  NProgress.done();
+};
 
 class Page extends React.Component {
   constructor(props) {
@@ -20,6 +31,8 @@ class Page extends React.Component {
   componentDidMount() {
     document.querySelector(".container").style.width = window.innerWidth;
   }
+  componentWillMount = () => {};
+
   render() {
     return (
       <div
