@@ -3,15 +3,21 @@ import axios from "axios";
 
 class Iphone extends React.Component {
   state = {
-    isLoaded: false
+    isLoaded: false,
+    hasError: false
   };
   async loadMeduimProfile() {
-    let url = "https://medium.com/@saidhayani";
-    let result = await axios.get(url);
-    if (result) {
-      setTimeout(() => {
-        this.setState(state => ({ ...state, isLoaded: true }));
-      }, 4000);
+    try {
+      let url = "https://medium.com/@saidhayani";
+      let result = await axios.get(url);
+      if (result) {
+        setTimeout(() => {
+          this.setState(state => ({ ...state, isLoaded: true }));
+        }, 4000);
+      }
+      this.setState(state => ({ ...state, isLoaded: true }));
+    } catch (err) {
+      this.setState({ hasError: true });
     }
   }
   //disable click on preview
@@ -39,12 +45,21 @@ class Iphone extends React.Component {
               onClick={() => false}
             />
           ) : (
-            <div className="iphone_placeholder">
-              {/* <p lassName="iphone_placeholder_paragraph">loading ...</p> */}
-              <img
-                className="iphone_placeholder_spinner"
-                src="./../static/images/spinner.svg"
-              />
+            <div>
+              {!this.state.hasError ? (
+                <div className="iphone_placeholder">
+                  {/* <p lassName="iphone_placeholder_paragraph">loading ...</p> */}
+                  <img
+                    className="iphone_placeholder_spinner"
+                    src="./../static/images/spinner.svg"
+                  />
+                </div>
+              ) : (
+                <div>
+                  <img src="/static/images/desktop.svg" width="100%" />
+                  <span>An Error accured! please try again ❤️</span>
+                </div>
+              )}
             </div>
           )}
           {/* <img
