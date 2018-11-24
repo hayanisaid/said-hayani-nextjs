@@ -1,6 +1,5 @@
 import React from "react";
 import axios from "axios";
-import ErrorBoundrais from "./ErrorBoundrais";
 
 class Iphone extends React.Component {
   state = {
