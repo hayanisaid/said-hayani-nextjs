@@ -36,6 +36,7 @@ class Iphone extends React.Component {
               type="text/html"
               data="https://medium.com/@saidhayani"
               style={{ width: "100%", height: "100%" }}
+              onClick={() => false}
             />
           ) : (
             <div className="iphone_placeholder">
