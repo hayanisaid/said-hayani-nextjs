@@ -5,7 +5,7 @@ import Loading from "/components/Loading";
 //import Home from "./home";
 
 import Wrapper from "../components/Wrapper";
-const Home = dynamic(import("./Home"), {
+const Home = dynamic(import("./home"), {
   loading: () => <Loading />
 });
 class App extends React.Component {
