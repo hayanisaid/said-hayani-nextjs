@@ -1,5 +1,4 @@
 import React from "react";
-import Placeholder from "./placeholder";
 import axios from "axios";
 
 class Iphone extends React.Component {

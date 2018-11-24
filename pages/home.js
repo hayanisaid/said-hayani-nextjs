@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 //import Link from "next/link";
-import Head from "../components/head";
+import Head from "../components/Head";
 import dynamic from "next/dynamic";
 import Page from "../components/Page";
 import Wrapper from "../components/Wrapper";

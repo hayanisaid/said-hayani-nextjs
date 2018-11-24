@@ -1,7 +1,7 @@
 import React from "react";
 import Nav from "./Nav";
 import style from "../styles/style.styl";
-import MobileBtn from "./mobilebtn";
+import MobileBtn from "./Mobilebtn";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { ActionInvorkers } from "./actions/menu.action";

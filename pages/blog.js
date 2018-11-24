@@ -1,10 +1,10 @@
 import React from "react";
 import { connect } from "react-redux";
-import Head from "./../components/head";
+import Head from "./../components/Head";
 import Page from "./../components/Page";
 import Wrapper from "./../components/Wrapper";
 import Card from "./../components/Card";
-import Placeholder from "./../components/placeholder";
+import Placeholder from "./../components/Placeholder";
 //import sketch from "./../static/images/me.jpeg";
 //const imag = require("./../static/images/said-sketch-v3.jpg");
 const url = "https://medium.com/@saidhayani";

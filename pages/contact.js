@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import Head from "./../components/head";
+import Head from "./../components/Head";
 import Wrapper from "./../components/Wrapper";
 
 import Page from "./../components/Page";

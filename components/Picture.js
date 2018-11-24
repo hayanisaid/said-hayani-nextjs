@@ -1,6 +1,6 @@
 import React from "react";
 import Circle from "./animated-circle";
-import Iphone from "./iphone";
+import Iphone from "./Iphone";
 
 const Picture = ({ NightMode }) => (
   <div className="picture">

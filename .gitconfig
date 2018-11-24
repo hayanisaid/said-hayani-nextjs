@@ -1,0 +1,7 @@
+
+
+
+[alias]
+
+pl = pull --rebase
+cm = commit -m 
