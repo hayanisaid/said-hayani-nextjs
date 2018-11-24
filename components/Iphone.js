@@ -3,7 +3,7 @@ import axios from "axios";
 
 class Iphone extends React.Component {
   state = {
-    isLoaded: false
+    isLoaded: true
   };
   async loadMeduimProfile() {
     let url = "https://medium.com/@saidhayani";
