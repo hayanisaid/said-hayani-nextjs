@@ -7,13 +7,12 @@ class Iphone extends React.Component {
   };
   async loadMeduimProfile() {
     let url = "https://medium.com/@saidhayani";
-    let result = axios.get(url);
+    let result = await axios.get(url);
     if (result) {
       setTimeout(() => {
         this.setState(state => ({ ...state, isLoaded: true }));
       }, 4000);
     }
-    this.setState(state => ({ ...state, isLoaded: true }));
   }
   //disable click on preview
   handleClick = () => {
