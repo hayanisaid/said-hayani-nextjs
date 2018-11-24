@@ -19,7 +19,7 @@ class Iphone extends React.Component {
     return false;
   };
   componentDidMount() {
-    this.loadMeduimProfile();
+    //this.loadMeduimProfile();
   }
   render() {
     return (
