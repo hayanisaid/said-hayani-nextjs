@@ -3,23 +3,23 @@ import axios from "axios";
 
 class Iphone extends React.Component {
   state = {
-    isLoaded: true
+    isLoaded: false
   };
   async loadMeduimProfile() {
-    let url = "https://medium.com/@saidhayani";
-    let result = axios.get(url);
-    if (result) {
-      setTimeout(() => {
-        this.setState(state => ({ ...state, isLoaded: true }));
-      }, 5000);
-    }
+    //let url = "https://medium.com/@saidhayani";
+    // let result = axios.get(url);
+    // if (result) {
+    setTimeout(() => {
+      this.setState(state => ({ ...state, isLoaded: true }));
+    }, 5000);
+    //}
   }
   //disable click on preview
   handleClick = () => {
     return false;
   };
   componentDidMount() {
-    //this.loadMeduimProfile();
+    this.loadMeduimProfile();
   }
   render() {
     return (
