@@ -8,10 +8,10 @@ class Iphone extends React.Component {
   async loadMeduimProfile() {
     let url = "https://www.saidhayani.me/";
     let result = axios.get(url);
-     if (result) {
-    setTimeout(() => {
-      this.setState(state => ({ ...state, isLoaded: true }));
-    }, 3000);
+    if (result) {
+      setTimeout(() => {
+        this.setState(state => ({ ...state, isLoaded: true }));
+      }, 3000);
     }
   }
   //disable click on preview
