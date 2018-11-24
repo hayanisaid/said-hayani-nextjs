@@ -13,6 +13,7 @@ class Iphone extends React.Component {
         this.setState(state => ({ ...state, isLoaded: true }));
       }, 4000);
     }
+    this.setState(state => ({ ...state, isLoaded: true }));
   }
   //disable click on preview
   handleClick = () => {
