@@ -34,12 +34,9 @@ class Blog extends React.Component {
       responseType: "json"
     })
       .then(data => {
-        console.log("data pub");
-        console.log(data);
+        // console.log("data pub");
       })
-      .catch(err => {
-        console.log("err==", err);
-      });
+      .catch(err => {});
   }
   componentDidMount() {
     //   this.getMediumPost();

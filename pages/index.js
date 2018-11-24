@@ -5,7 +5,11 @@ import { connect } from "react-redux";
 
 import Wrapper from "./../components/wrapper";
 const Home = dynamic(import("./home"), {
-  loading: () => <div>.... loading</div>
+  loading: () => (
+    <div className="loading">
+      <img src="/static/desktop.svg" />
+    </div>
+  )
 });
 class App extends React.Component {
   componentDidMount = () => {};

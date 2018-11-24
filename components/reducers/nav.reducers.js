@@ -13,7 +13,6 @@ const initialState = {
 };
 
 export function setNightModeReducer(state = initialState, action) {
-  console.log("action", action);
   let {
     isNightMode,
     navClass,
