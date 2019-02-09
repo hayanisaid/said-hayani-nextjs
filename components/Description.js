@@ -7,9 +7,12 @@ const Description = ({ NightMode }) => (
     <h3 className={NightMode.titleclass}>
       FrontEnd Software Developer| technical Writer | instructor{" "}
     </h3>
+    <code>
     <p className={NightMode.titleclass}>
-      I dedicate my time to teach JavaScript for beginners
+     Love React, React Native , JavaScript
     </p>
+    </code>
+   
     <SoMedia />
   </div>
 );

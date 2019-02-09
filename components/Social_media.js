@@ -25,7 +25,7 @@ const SoMedias = () => (
           />
         </a>
       </li>
-      <li>
+      {/* <li>
         <a href="#">
           <img
             src="./../static/icons/instagram.png"
@@ -35,7 +35,7 @@ const SoMedias = () => (
             className="icon"
           />
         </a>
-      </li>
+      </li> */}
     </ul>
   </div>
 );

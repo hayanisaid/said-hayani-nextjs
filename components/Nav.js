@@ -86,7 +86,7 @@ class Nav extends Component {
                 <a>Home 🏠 </a>
               </Link>
             </li>
-            <li className="menu-item">
+            {/* <li className="menu-item">
               {" "}
               <Link href="/blog">
                 <a>Blog 📘</a>
@@ -97,7 +97,7 @@ class Nav extends Component {
               <Link href="/stories">
                 <a>Stories 🎥 </a>
               </Link>
-            </li>
+            </li> */}
             <li className="menu-item">
               {" "}
               <Link href="/contact">
